@@ -1,4 +1,4 @@
-image: openjdk:8-jdk
+FROM openjdk:8-jdk
 MAINTAINER New Rey <mail@newrey.com>
 
 ENV ANDROID_COMPILE_SDK: "25"
