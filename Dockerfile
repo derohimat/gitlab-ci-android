@@ -29,4 +29,5 @@ RUN wget --quiet --output-document=gradlew.zip https://github.com/newrey/gradlew
     unzip gradlew.zip && rm gradlew.zip &&\
     mv gradlew-master/ /gradlew && \
     chmod a+x /gradlew/gradlew && \
-    ./gradlew/gradlew wrapper --version
+    cd /gradlew && \
+    ./gradlew wrapper --gradle-version $GRADLE_VERSION
