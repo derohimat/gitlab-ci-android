@@ -25,7 +25,8 @@ RUN export ANDROID_HOME=$PWD/android-sdk-linux && \
 ENV ANDROID_HOME $ANDROID_HOME
 ENV PATH $PATH
 
-COPY gradlew/  /gradlew/
-
-RUN chmod a+x /gradlew/gradlew
-RUN sh /gradlew/gradlew wrapper --gradle-version $GRADLE_VERSION
+RUN wget --quiet --output-document=gradlew.zip https://github.com/newrey/gradlew/archive/master.zip && \
+    unzip gradlew.zip && \
+    mv gradlew-master/ gradlew && \
+    chmod a+x /gradlew/gradlew && \
+    ./gradlew/gradlew wrapper --gradle-version $GRADLE_VERSION
