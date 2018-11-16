@@ -23,3 +23,7 @@ RUN export ANDROID_HOME=$PWD/android-sdk-linux && \
 
 ENV ANDROID_HOME $ANDROID_HOME
 ENV PATH $PATH
+
+COPY gradlew/  gradlew/
+
+RUN .gradlew/gradlew wrapper --gradle-version 4.6
