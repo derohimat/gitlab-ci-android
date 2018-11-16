@@ -27,5 +27,5 @@ ENV PATH $PATH
 
 COPY gradlew/  gradlew/
 
-RUN chmod a+x /gradlew/gradlew && \
-    ./gradlew/gradlew wrapper --gradle-version $GRADLE_VERSION
+# RUN chmod a+x /gradlew/gradlew && \
+#     ./gradlew/gradlew wrapper --gradle-version $GRADLE_VERSION
