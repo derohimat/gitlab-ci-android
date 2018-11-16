@@ -25,7 +25,7 @@ RUN export ANDROID_HOME=$PWD/android-sdk-linux && \
 ENV ANDROID_HOME $ANDROID_HOME
 ENV PATH $PATH
 
-COPY gradlew/  gradlew/
+COPY gradlew/  /gradlew/
 
-# RUN chmod a+x /gradlew/gradlew && \
-#     ./gradlew/gradlew wrapper --gradle-version $GRADLE_VERSION
+RUN chmod a+x /gradlew/gradlew
+RUN ./gradlew/gradlew wrapper --gradle-version $GRADLE_VERSION
