@@ -1,19 +1,10 @@
 FROM openjdk:8-jdk
 MAINTAINER New Rey <mail@newrey.com>
 
-ENV ANDROID_COMPILE_SDK: "25"
-ENV ANDROID_BUILD_TOOLS: "24.0.0"
-ENV ANDROID_SDK_TOOLS: "24.4.1"
+ENV ANDROID_COMPILE_SDK "25"
+ENV ANDROID_BUILD_TOOLS "24.0.0"
+ENV ANDROID_SDK_TOOLS "24.4.1"
 
-
-#ENV VERSION_SDK_TOOLS "4333796"
-
-#ENV ANDROID_HOME "/sdk"
-#ENV PATH "$PATH:${ANDROID_HOME}/tools"
-#ENV DEBIAN_FRONTEND noninteractive
-
-
-   
 RUN apt-get --quiet update --yes && \
     apt-get --quiet install --yes wget tar unzip lib32stdc++6 lib32z1
     
